@@ -737,8 +737,6 @@ fieldset {
   padding-bottom: 96px;
   height: 664px;
   background-color: var(--navy-blue);
-  padding-right: 16px;
-  padding-left: 16px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1157.98px) {
@@ -760,17 +758,23 @@ fieldset {
   flex-wrap: wrap;
   align-items: baseline;
   max-width: 767.97px;
+  margin: 0 auto;
+  padding-right: 16px;
+  padding-left: 16px;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1157.98px) {
   .footer .container {
     max-width: 1157.97px;
+    text-align: start;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .footer .container {
     max-width: 1440px;
+    text-align: start;
   }
 }
 
@@ -779,12 +783,16 @@ fieldset {
 }
 
 .footer-first {
-  margin-bottom: 72px;
+  margin: 0 auto 72px;
+}
+
+.footer-text {
+  text-align: start;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1157.98px) {
   .footer-first {
-    margin-left: 108px;
+    margin-left: 92px;
     margin-right: 24px;
     margin-bottom: 72px;
   }
@@ -794,6 +802,7 @@ fieldset {
   .footer-first {
     margin-right: 120px;
     margin-bottom: 0px;
+    margin-left: 0px;
   }
 }
 
@@ -827,8 +836,9 @@ fieldset {
 
 .footer-logo {
   display: inline-block;
-  margin-bottom: 16px;
-  text-align: center;
+  /* margin-bottom: 16px;
+  margin-left: 102px; */
+  /* text-align: center; */
   margin: 0 auto 16px;
 }
 
@@ -850,7 +860,21 @@ fieldset {
 }
 
 .footer-second {
-  margin-right: 80px;
+  margin: 0 auto 72px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157.98px) {
+  .footer-second {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .footer-second {
+    margin-right: 80px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
 }
 
 .footer-third {
@@ -859,10 +883,24 @@ fieldset {
   flex-wrap: wrap;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1157.98px) {
+  .footer-third {
+    margin-left: 92px;
+    /* margin-bottom: 72px; */
+  }
+}
+
 .footer-form {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 16px;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-form {
+    gap: 24px;
+  }
 }
 
 .footer-button {
