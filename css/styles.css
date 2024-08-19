@@ -301,6 +301,8 @@ fieldset {
   }
 }
 
+/*#region mob-container*/
+
 .menu-container {
   position: fixed;
   top: 0;
@@ -395,6 +397,7 @@ fieldset {
   opacity: 1;
   pointer-events: auto;
 }
+/*#endregion mob-container*/
 
 /* #endregion header */
 
