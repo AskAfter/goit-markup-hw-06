@@ -1180,11 +1180,17 @@ fieldset {
   width: 288px;
   min-height: 623px;
   border-radius: 4px;
-  padding: 72px 24px 24px;
+  padding: 72px 16px 24px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
   overflow-y: auto;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    padding: 72px 24px 24px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1308,7 +1314,7 @@ fieldset {
 .textarea {
   display: block;
   box-sizing: border-box;
-  width: 360px;
+  width: 256px;
   height: 120px;
   padding: 8px 16px;
   font-size: 12px;
@@ -1322,6 +1328,12 @@ fieldset {
   resize: none;
   background-color: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .textarea {
+    width: 360px;
+  }
 }
 
 .textarea::placeholder-shown {
