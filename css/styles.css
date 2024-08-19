@@ -275,10 +275,10 @@ fieldset {
 
 .icon-mob {
   stroke: var(--common-black);
-  fill: var(--common-black);
+  /* fill: var(--common-black); */
 }
 
-.menu-container {
+.menu-icon {
   display: flex;
   justify-content: center;
   margin-left: auto;
@@ -292,13 +292,108 @@ fieldset {
   align-items: center;
   height: 24px;
   width: 24px;
-  background-color: var(--white);
+  background-color: transparent;
 }
 
 @media screen and (min-width: 768px) {
-  .menu-container {
+  .menu-icon {
     display: none;
   }
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  background-color: var(--white);
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  padding-top: 72px;
+  padding-right: 24px;
+  padding-left: 16px;
+  padding-bottom: 40px;
+  justify-content: space-between;
+  overflow: auto;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu-close-button {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid var(--cornflower);
+}
+
+.menu-close-svg {
+  fill: var(--navy-blue);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mob-header-links {
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11; /* 111.111% */
+  letter-spacing: 0.02em;
+  color: var(--navy-blue);
+}
+
+.mob-current {
+  color: var(--ocean);
+}
+
+.mob-address {
+  margin-bottom: 48px;
+}
+
+.mob-top {
+  margin-bottom: 100px;
+}
+
+.mob-address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mob-contact {
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2; /* 120% */
+  letter-spacing: 0.02em;
+  color: var(--slate);
+}
+
+.mob-tel {
+  color: var(--iris);
+}
+
+.header .social-links {
+  gap: 40px;
+}
+
+.menu-container.is-open {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* #endregion header */
@@ -1062,8 +1157,8 @@ fieldset {
   display: flex;
   /* justify-content: center;
   align-items: center; */
-  opacity: 1;
-  /* pointer-events: none; */
+  opacity: 0;
+  pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
